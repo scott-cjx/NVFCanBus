@@ -22,11 +22,11 @@
 
 // CAN Network 1
 MCP_CAN NVFCanI0(CAN_CSN1);
-NVF_Can NVFCan0(&NVFCanI0, 0x01);
+NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
 
 // CAN Network 2
 MCP_CAN NVFCanI1(CAN_CSN2);
-NVF_Can NVFCan1(&NVFCanI1, 0x01);
+NVF_CanBus NVFCan1(&NVFCanI1, 0x01);
 
 void setup()
 {

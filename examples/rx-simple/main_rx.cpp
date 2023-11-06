@@ -15,7 +15,7 @@
 #include "NVF_CanBus.h"
 
 MCP_CAN NVFCanI0(CAN_CSN);
-NVF_Can NVFCan0(&NVFCanI0, 0x01);
+NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
 
 void setup()
 {

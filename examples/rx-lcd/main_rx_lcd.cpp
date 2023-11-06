@@ -16,7 +16,7 @@
 #include "NVF_CanBus.h"
 
 MCP_CAN NVFCanI0(CAN_CSN);
-NVF_Can NVFCan0(&NVFCanI0, 0x01);
+NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 can_frame rx_buf;
