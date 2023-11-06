@@ -1,5 +1,7 @@
 # NVF2-DA-Exploring-CanBus
 
+[![PlatformIO CI](https://github.com/scott-cjx/NVFCanBus/actions/workflows/pio-test.yml/badge.svg?branch=main)](https://github.com/scott-cjx/NVFCanBus/actions/workflows/pio-test.yml)
+
 Some sample testing and debugging codes for CAN Bus Module MCP2515 with the following controllers:
 
 | Controller                 | Status |
