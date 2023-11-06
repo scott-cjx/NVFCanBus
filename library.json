@@ -1,26 +1,23 @@
 {
-    "name": "platformio-lib",
-    "version": "1.0.0",
-    "description": "a template github repo for platformio library",
+    "name": "NVF-CanBus",
+    "version": "0.0.1",
+    "description": "A wrapper library for CanBus features ",
     "repository":
     {
       "type": "git",
-      "url": "https://github.com/username/hello-world.git"
+      "url": "https://https://github.com/scott-cjx/NVFCanBus.git"
     },
     "authors":
     [
       {
-        "name": "John Smith",
-        "email": "me@john-smith.com",
-        "url": "https://www.john-smith/contact"
-      },
-      {
-        "name": "Andrew Smith",
-        "email": "me@andrew-smith.com",
-        "url": "https://www.andrew-smith/contact",
-        "maintainer": true
+        "name": "Scott Cheng",
+        "email": "scottcjx.w@gmail.com",
+        "url": "https://www.scottcjx.com/contact"
       }
     ],
+    "dependencies": {
+      "coryjfowler/mcp_can": "^1.5.0"
+    },
     "license": "GPLv3",
     "homepage": "https://www.gnu.org/licenses/gpl-3.0.en.html",
     "frameworks": "*",
