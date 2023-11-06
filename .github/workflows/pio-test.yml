@@ -10,7 +10,7 @@ jobs:
       matrix:
         # os: [ubuntu-latest, macos-latest, windows-latest]
         os: [ubuntu-latest]
-        example: [examples/main_passthru/main_passtx.cpp]
+        example: [examples/pass-through/main_passtx.cpp]
 
     steps:
       - uses: actions/checkout@v3
