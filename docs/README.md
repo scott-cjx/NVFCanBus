@@ -21,7 +21,7 @@ This project is still a WIP.
 
 ## 1.2. Examples
 
-Apart from bare bones `tx` and `rx` examples for using NVF_CAN wrappers, we also have examples for:
+Apart from bare bones `tx` and `rx` examples for using NVF_CanBus wrappers, we also have examples for:
 
 | Example                                                       |       Status        | UNO |  Bluepill  |
 |---------------------------------------------------------------|:-------------------:|:---:|:----------:|
