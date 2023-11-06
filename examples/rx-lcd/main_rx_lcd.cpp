@@ -10,15 +10,15 @@
  */
 
 #include <Arduino.h>
-#include <LiquidCrystal.h>
+#include <LiquidCrystal_I2C.h>
 
 #include "board_dfs.h"
 #include "NVF_CanBus.h"
 
-MCP_CAN NVFCanI0(BoardDef::CAN_CSN);
+MCP_CAN NVFCanI0(CAN_CSN);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
 
-LiquidCrystal lcd(0x27, 16, 2);
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 can_frame rx_buf;
 
 void setup()
