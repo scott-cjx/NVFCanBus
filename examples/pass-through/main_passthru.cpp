@@ -23,10 +23,12 @@
 // CAN Network 1
 MCP_CAN NVFCanI0(CAN_CSN1);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
+can_frame rx_buf0;
 
 // CAN Network 2
 MCP_CAN NVFCanI1(CAN_CSN2);
 NVF_CanBus NVFCan1(&NVFCanI1, 0x01);
+can_frame rx_buf1;
 
 void setup()
 {
@@ -34,9 +36,6 @@ void setup()
   NVFCan0.setup();
   NVFCan1.setup();
 }
-
-can_frame rx_buf0;
-can_frame rx_buf1;
 
 void loop()
 {

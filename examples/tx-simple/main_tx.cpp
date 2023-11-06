@@ -19,6 +19,9 @@
 
 MCP_CAN NVFCanI0(BoardDef::CAN_CSN);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x0F);
+can_frame tx_buf;
+
+uint8_t counter_buf = 0;
 
 void setup()
 {
@@ -26,9 +29,6 @@ void setup()
   NVFCan0.setup();
 }
 
-uint8_t counter_buf = 0;
-
-can_frame tx_buf;
 void loop()
 {
   if (counter_buf == -2) counter_buf = 0;

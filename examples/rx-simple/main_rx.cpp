@@ -16,14 +16,13 @@
 
 MCP_CAN NVFCanI0(BoardDef::CAN_CSN);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
+can_frame rx_buf;
 
 void setup()
 {
   Serial.begin(115200);
   NVFCan0.setup();
 }
-
-can_frame rx_buf;
 
 void loop()
 {

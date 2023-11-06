@@ -21,7 +21,6 @@
 
 MCP_CAN NVFCanI0(BoardDef::CAN_CSN);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x0B);
-
 can_frame tx_buf;
 
 void setup()
