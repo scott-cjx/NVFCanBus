@@ -18,7 +18,7 @@
 MCP_CAN NVFCanI0(BoardDef::CAN_CSN);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x01);
 
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+LiquidCrystal lcd(0x27, 16, 2);
 can_frame rx_buf;
 
 void setup()
