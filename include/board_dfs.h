@@ -14,7 +14,7 @@
 
 namespace BoardDef
 {
-    #if !defined(BOARD_UNO) && !define(BOARD_BLUEPILL) && !defined(BOARD_PICO)
+    #if !defined(BOARD_UNO) && !defined(BOARD_BLUEPILL) && !defined(BOARD_PICO)
         const uint16_t CAN_CSN      = 1;
         const uint16_t CAN_CSN2     = 1;
         const uint16_t ANALOG_PIN   = 1;
