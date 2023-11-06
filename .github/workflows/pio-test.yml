@@ -11,6 +11,7 @@ jobs:
         # os: [ubuntu-latest, macos-latest, windows-latest]
         os: [ubuntu-latest]
         example: [examples/tx-simple/main_tx.cpp, examples/tx-analog/main_tx_analog.cpp, examples/rx-simple/main_rx.cpp, examples/pass-through/main_passthru.cpp]
+        special-example: [examples/rx-lcd/main_rx_lcd.cpp]
 
     steps:
       - uses: actions/checkout@v3
@@ -37,3 +38,14 @@ jobs:
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.example }}
           PLATFORMIO_BUILD_FLAGS: -D BOARD_BLUEPILL
+      
+      - name: Download external library
+        run: |
+          wget https://github.com/arduino-libraries/LiquidCrystal/archive/master.zip -O /tmp/LiquidCrystal.zip
+          unzip /tmp/LiquidCrystal.zip -d /tmp
+
+      - name: Run PlatformIO CI LCD
+        run: pio ci --lib="." --lib="/tmp/LiquidCrystal" --board=uno --board=bluepill_f103c8
+        env:
+          PLATFORMIO_CI_SRC: ${{matrix.special-example}}
+          PLATFORMIO_BUILD_FLAGS: -D BOARD_UNO
