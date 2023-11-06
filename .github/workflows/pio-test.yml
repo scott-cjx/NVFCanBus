@@ -27,17 +27,17 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
 
-      # - name: Run PlatformIO CI UNO
-      #   run: pio ci --lib="." --board=uno
-      #   env:
-      #     PLATFORMIO_CI_SRC: ${{ matrix.example }}
-      #     PLATFORMIO_BUILD_FLAGS: -D BOARD_UNO
+      - name: Run PlatformIO CI UNO
+        run: pio ci --lib="." --board=uno
+        env:
+          PLATFORMIO_CI_SRC: ${{ matrix.example }}
+          PLATFORMIO_BUILD_FLAGS: -D BOARD_UNO
       
-      # - name: Run PlatformIO CI BLUEPILL
-      #   run: pio ci --lib="." --board=bluepill_f103c8
-      #   env:
-      #     PLATFORMIO_CI_SRC: ${{ matrix.example }}
-      #     PLATFORMIO_BUILD_FLAGS: -D BOARD_BLUEPILL
+      - name: Run PlatformIO CI BLUEPILL
+        run: pio ci --lib="." --board=bluepill_f103c8
+        env:
+          PLATFORMIO_CI_SRC: ${{ matrix.example }}
+          PLATFORMIO_BUILD_FLAGS: -D BOARD_BLUEPILL
       
       - name: Run PlatformIO CI LCD
         run: pio ci --lib="." --project-option="lib_deps=marcoschwartz/LiquidCrystal_I2C@^1.1.4" --board=uno --board=bluepill_f103c8
