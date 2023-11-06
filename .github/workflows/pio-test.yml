@@ -40,6 +40,6 @@ jobs:
       #     PLATFORMIO_BUILD_FLAGS: -D BOARD_BLUEPILL
       
       - name: Run PlatformIO CI LCD
-        run: pio ci --lib="." ---llibrary="marcoschwartz/LiquidCrystal_I2C@^1.1.4" --board=uno --board=bluepill_f103c8
+        run: pio ci --lib="." --project-option="lib_deps=marcoschwartz/LiquidCrystal_I2C@^1.1.4" --board=uno --board=bluepill_f103c8
         env:
           PLATFORMIO_CI_SRC: ${{matrix.special-example}}
