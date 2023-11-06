@@ -48,4 +48,3 @@ jobs:
         run: pio ci --lib="." --lib="/tmp/LiquidCrystal-master" --board=uno --board=bluepill_f103c8
         env:
           PLATFORMIO_CI_SRC: ${{matrix.special-example}}
-          PLATFORMIO_BUILD_FLAGS: -D BOARD_UNO

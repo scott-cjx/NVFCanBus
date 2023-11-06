@@ -10,7 +10,7 @@
  */
 
 #include <Arduino.h>
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal.h>
 
 #include "board_dfs.h"
 #include "NVF_CanBus.h"
