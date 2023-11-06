@@ -15,12 +15,12 @@
 #include "board_dfs.h"
 #include "NVF_CanBus.h"
 
+#define ANALOG_PIN          BoardDef::ANALOG_PIN
+
 #define DELAY_MS            250
 
 MCP_CAN NVFCanI0(BoardDef::CAN_CSN);
 NVF_CanBus NVFCan0(&NVFCanI0, 0x0B);
-
-can_frame tx_buf;
 
 can_frame tx_buf;
 
