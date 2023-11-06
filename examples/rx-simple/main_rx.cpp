@@ -12,7 +12,7 @@
 #include <Arduino.h>
 
 #include "board_dfs.h"
-#include "NVF_Can.h"
+#include "NVF_CanBus.h"
 
 MCP_CAN NVFCanI0(CAN_CSN);
 NVF_Can NVFCan0(&NVFCanI0, 0x01);
