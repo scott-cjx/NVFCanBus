@@ -14,6 +14,12 @@
 
 namespace BoardDef
 {
+    #if !defined(BOARD_UNO) && !define(BOARD_BLUEPILL) && !defined(BOARD_PICO)
+        #define CAN_CSN             1
+        #define CAN_CSN2            1
+        #define ANALOG_PIN          1
+    #endif
+
     #ifdef BOARD_UNO
     // Tested Working
     #define CAN_CSN             10
