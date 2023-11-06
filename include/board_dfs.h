@@ -11,7 +11,7 @@
 
 #include <stdint.h>
 #include <Arduino.h>
-#include <SPI>
+#include <SPI.h>
 
 namespace BoardDef
 {
