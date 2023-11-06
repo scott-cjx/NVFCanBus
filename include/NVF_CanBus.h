@@ -1,9 +1,9 @@
 /**
  * @file NVF_CanBus.h
  * @author Scott CJX (scottcjx.w@gmail.com)
- * @brief Tested WorkingTested Working 
+ * @brief Tested Working
  * @version 1.0.0
- * @date 12-10-2023
+ * @date 07-11-2023
  * 
  * @copyright Copyright (c) 2023
  * 
