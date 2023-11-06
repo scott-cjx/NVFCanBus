@@ -45,5 +45,5 @@ namespace BoardDef
     const uint16_t ANALOG_PIN   = 0;
     #define Serial              SerialUSB
     #endif
-= };
+};
 
