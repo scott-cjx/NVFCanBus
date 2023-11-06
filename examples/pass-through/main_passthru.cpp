@@ -1,9 +1,9 @@
 /**
  * @file main_passthru.cpp
  * @author Scott CJX
- * @brief WIP
- * @version 0.1
- * @date 2023-10-12
+ * @brief Tested Working
+ * @version 1.0.0
+ * @date 07-10-2023
  * 
  * @copyright Copyright (c) 2023
  * 

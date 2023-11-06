@@ -1,8 +1,8 @@
 /**
  * @file main_tx_analog.cpp
  * @author Scott CJX (scottcjx.w@gmail.com)
- * @brief 
- * @version 0.1
+ * @brief Tested WorkingTested Working 
+ * @version 1.0.0
  * @date 16-10-2023
  * 
  * @copyright Copyright (c) 2023
