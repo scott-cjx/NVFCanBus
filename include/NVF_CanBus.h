@@ -31,7 +31,7 @@ private:
   MCP_CAN *CAN;
 
 public:
-  NVF_CanBus(MCP_CAN *CAN, ul canId);
+  NVF_CanBus(MCP_CAN *CAN, uint32_t canId);
   bool setup();
   bool tx(can_frame *);
   bool taskLoopRecv(can_frame *);
