@@ -11,7 +11,7 @@ jobs:
           run: pip install style50
   
         - name: Correct style
-          run: style50 -r *.cpp *.c *.h *.hpp -i
+          run: style50 -E *.cpp *.c *.h *.hpp ./*
   
         - name: Create pull request
           run: |
