@@ -1,6 +1,9 @@
 name: markdown-autodocs
 permissions: write-all
-on: [push]
+on:
+  push:
+    branches:    
+      - main
 
 jobs:
   auto-update-readme:
