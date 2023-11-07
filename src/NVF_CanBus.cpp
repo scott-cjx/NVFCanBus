@@ -17,7 +17,7 @@
  * @param CAN 
  * @param canId 
  */
-NVF_CanBus::NVF_CanBus(MCP_CAN *CAN, unsigned long canId)
+NVF_CanBus::NVF_CanBus(MCP_CAN *CAN, uint32_t canId)
 {
   this->thisCanID = canId;
   this->CAN = CAN;

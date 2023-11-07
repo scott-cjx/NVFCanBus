@@ -27,7 +27,7 @@ namespace BoardDef
     const uint16_t CAN_CSN2     = 9;
     const uint16_t ANALOG_PIN   = 0;
     #endif
-    
+
     #ifdef BOARD_BLUEPILL
     // Tested Working
     //                          (arduino::MbedSPI) {miso, mosi, sck}

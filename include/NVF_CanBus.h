@@ -12,16 +12,14 @@
 #ifndef NVF_CANBUS_H_
 #define NVF_CANBUS_H_
 
+#include <stdint.h>
 #include <Arduino.h>
 #include <mcp_can.h>
 #include <SPI.h>
-#include <stdint.h>
-
-#define ul unsigned long
 
 struct can_frame
 {
-  unsigned long can_id = 0xFF;
+  uint32_t can_id = 0xFF;
   uint8_t can_dlc;
   uint8_t data[8];
 };
@@ -29,7 +27,7 @@ struct can_frame
 class NVF_CanBus
 {
 private:
-  ul thisCanID;
+  uint32_t thisCanID;
   MCP_CAN *CAN;
 
 public:
