@@ -4,22 +4,16 @@
 
 Some sample testing and debugging codes for CAN Bus Module MCP2515 with the following controllers:
 
-| Controller                 | Status |
-|----------------------------|:------:|
-| Arduino UNO                |   ✅    |
-| WeAct Bluepill [STM32F103] |   ✅    |
-| WeAct Raspberry Pi Pico    |   ❌    |
-
-
 ### 1.0.1. Technical Documentaion
 Read the [Technical Documentations...](./technical.md)
 
 ## 1.1. Current Status
 
-This project is still a WIP.
-
-- For `Arduino UNO`, code has been tested and is working.
-- For the `other controllers`, there are multiple SPI interfaces as well as multiple pins muxed into single SPI buses. it is not yet known to us on how we will be able to choose the SPI pins on the other boards.
+| Controller                 | Status |
+|----------------------------|:------:|
+| Arduino UNO                |   ✅    |
+| WeAct Bluepill [STM32F103] |   ✅    |
+| WeAct Raspberry Pi Pico    |   WIP    |
 
 ## 1.2. Examples
 

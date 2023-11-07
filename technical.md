@@ -18,10 +18,11 @@ Within the [platform.ini](../platformio.ini) configuration file, there exists a 
 
 ### 1.1.2. SPI Bus and Pins Selection
 
-Apart from Arduino UNO/ Nano boards, more powerful boards such as [raspberry pi pico](/) and [bluepill](/) have mulitple SPI Busses and pins for these SPI Busses. We should first define the pins and SPI Bus we want the controller to use.
+Apart from `Arduino UNO/ Nano` boards, boards such as [raspberry pi pico](/) and [bluepill](/) have mulitple SPI Busses and possible pinout for these SPI Busses. We should first define the pins and SPI Bus we want the controller to use.
 
-The constructor for SPI bus (ArduinoCore's Mbed API): `arduino::MbedSPI SPI {miso, mosi, sck}`
+The constructor for SPI bus [bluepill]
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./include/board_dfs.h&lines=34-34) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 This Should not be present for boards that do not have more than 1 SPI Bus/ Pin bank for SPI. It may also not be the correct constructor for all Boards. For now this works for us...
-
 
