@@ -1,0 +1,20 @@
+name: Style correction
+permissions: write-all
+on: [push]
+jobs:
+  style-correction:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install style50
+        run: pip install style50
+
+      - name: Correct style
+        run: style50 -f
+
+      - name: Create pull request
+        run: |
+          git add .
+          git commit -am "Correct style violations"
+          git push origin HEAD
+          gh pr create --title "Correct style violations" --body ""
