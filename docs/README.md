@@ -23,7 +23,7 @@ Apart from bare bones `tx` and `rx` examples for using NVF_CanBus wrappers, we a
 | Example                                     | UNO |  Bluepill  |
 |---------------------------------------------|:---:|:----------:|
 | [CAN RX -> LCD](../examples/rx-lcd/)        |  ✅  | Not Tested |
-| [CAN RX -> Serial](../examples/rx-lcd/)        |  ✅  | Not Tested |
+| [CAN RX -> Serial](../examples/rx-lcd/)     |  ✅  | Not Tested |
 | [Counter -> CAN TX](../examples/tx-simple/) |  ✅  |     ✅      |
 | [Analog -> CAN TX](../examples/tx-analog/)  |  ✅  |     ✅      |
 
