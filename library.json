@@ -12,11 +12,13 @@
       {
         "name": "Scott Cheng",
         "email": "scottcjx.w@gmail.com",
-        "url": "https://www.scottcjx.com/contact"
+        "url": "https://www.scottcjx.com/contact",
+        "maintainer": true
       }
     ],
     "dependencies": {
-      "coryjfowler/mcp_can": "^1.5.0"
+      "coryjfowler/mcp_can": "^1.5.0",
+      "SPI": "*"
     },
     "license": "GPLv3",
     "homepage": "https://www.gnu.org/licenses/gpl-3.0.en.html",
