@@ -4,52 +4,52 @@
 
 Some sample testing and debugging codes for CAN Bus Module MCP2515 with the following controllers:
 
-### 1.0.1. Technical Documentaion
+### Technical Documentaion
+
 Read the [Technical Documentations...](./technical.md)
 
-## 1.1. Current Status
+## Current Status
 
 | Controller                 | Status |
 |----------------------------|:------:|
 | Arduino UNO                |   ✅    |
 | WeAct Bluepill [STM32F103] |   ✅    |
-| WeAct Raspberry Pi Pico    |   WIP    |
+| WeAct Raspberry Pi Pico    |  WIP   |
 
-## 1.2. Examples
+## Examples
 
 Apart from bare bones `tx` and `rx` examples for using NVF_CanBus wrappers, we also have examples for:
 
-| Example                                                       |       Status        | UNO |  Bluepill  |
-|---------------------------------------------------------------|:-------------------:|:---:|:----------:|
-| [CAN RX -> LCD](./NVF2-CanBus/examples/main_rx_lcd.cpp)       | Tested and Working* |  ✅  | Not Tested |
-| [Counter -> CAN TX](./NVF2-CanBus/examples/main_tx.cpp)       | Tested and Working* |  ✅  |     ✅      |
-| [Analog -> CAN TX](./NVF2-CanBus/examples/main_tx_analog.cpp) | Tested and Working* |  ✅  |     ✅      |
+| Example                                     | UNO |  Bluepill  |
+|---------------------------------------------|:---:|:----------:|
+| [CAN RX -> LCD](../examples/rx-lcd/)        |  ✅  | Not Tested |
+| [CAN RX -> Serial](../examples/rx-lcd/)     |  ✅  | Not Tested |
+| [Counter -> CAN TX](../examples/tx-simple/) |  ✅  |     ✅      |
+| [Analog -> CAN TX](../examples/tx-analog/)  |  ✅  |     ✅      |
 
-\* only some controllers
+## Additional Examples
 
-## 1.3. Proposed Examples
+Apart from individual capabilities of a CanBus node as [demostrated above](#examples), here are some combinations of how muliple CanBus nodes can be hooked up and used.
 
-This project started to test the capbilities of CanBus for a car. here are some examples of capabilites we will want to test with this project.
+| Capability                                                      | Status |
+|-----------------------------------------------------------------|:------:|
+| [Simplest CAN Network](#simplest-can-network)                   |   ✅    |
+| [Normal Operating CAN Network](#normal-operating-can-network)   |   ✅    |
+| [Multiple CAN Networks](#multiple-can-networks-on-1-controller) |   ✅    |
 
-| Capability                                            | Status |
-|-------------------------------------------------------|:------:|
-| [Point to Point CAN](#point-to-point-can-2-nodes)     |   ✅    |
-| [1 CAN Network](#1-proper-can-network)                |   ✅    |
-| [Multiple CAN Networks](#1-controller-2-can-networks) |   ✅    |
-
-### 1.3.1. Point to Point CAN (2 Nodes)
+### Simplest CAN Network
 
 the most basic example of connecting 2 CAN Nodes together.
 
 ![img](rsc/img-simple_p2p.png)
 
-### 1.3.2. 1 Proper CAN Network
+### Normal Operating CAN Network
 
 Normal operation of 1 CAN Network where ALL nodes are on the same CAN Bus
 
 ![img](rsc/img-1can_network.png)
 
-### 1.3.3. 1 Controller, 2 CAN Networks
+### Multiple CAN Networks on 1 Controller
 
 Special operation where 1 CAN Node on the Network will act as a pass through to a seperate dedicated CAN Bus network.
 
