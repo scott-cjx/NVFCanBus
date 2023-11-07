@@ -1,21 +1,24 @@
-name: Style correction
+name: Code style correction
 permissions: write-all
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-    style-correction:
-      runs-on: ubuntu-latest
-  
-      steps:
-        - name: Install style50
-          run: pip install style50
-  
-        - name: Correct style
-          run: style50 -E *.cpp *.c *.h *.hpp ./*
-  
-        - name: Create pull request
-          run: |
-            git add .
-            git commit -am "Correct style violations"
-            git push origin HEAD
-            gh pr create --title "Correct style violations" --body ""
+  astyle-formatting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install astyle
+        run: sudo apt install astyle
+
+      - name: Format code
+        run: astyle -r **/*.cpp **/*.c **/*.h **/*.hpp
+
+      - name: Create pull request
+        run: |
+          git add .
+          git commit -am "Format code with astyle"
+          git push origin HEAD
+          gh pr create --title "Format code with astyle" --body ""
